@@ -7,18 +7,18 @@ wget -c https://cdn.jsdelivr.net/gh/topjohnwu/Magisk/scripts/module_installer.sh
 if [ ${#} -eq 0 ]; then
 	for pkg in $(ls | grep '.*.zip$')
 	do
-		unzip -o $pkg META-INF/com/google/android/update-binary -d . 
+		unzip -o "$pkg" META-INF/com/google/android/update-binary -d .
 		cat module_installer.sh > ./META-INF/com/google/android/update-binary
-		zip $pkg META-INF/com/google/android/update-binary
-		echo $pkg update successfully
+		zip "$pkg" META-INF/com/google/android/update-binary
+		echo "$pkg" update successfully
 	done
 else
-	for pkg in $@
+	for pkg in "$@"
 	do
-		unzip -o $pkg META-INF/com/google/android/update-binary -d .
+		unzip -o "$pkg" META-INF/com/google/android/update-binary -d .
 		cat module_installer.sh > ./META-INF/com/google/android/update-binary
-		zip $pkg META-INF/com/google/android/update-binary
-		echo $pkg update successfully
+		zip "$pkg" META-INF/com/google/android/update-binary
+		echo "$pkg" update successfully
 	done
 fi	
 
