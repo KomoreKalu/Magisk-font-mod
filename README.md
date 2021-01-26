@@ -1,6 +1,15 @@
 Magisk20版本字体模块失效的修复脚本
 
-`wget https://cdn.jsdelivr.net/gh/KomoreKalu/Magisk-font-mod/update-binary.sh -O - | bash -`
+### require
+
+`curl unzip zip`
+
+### usage
+
+| method | command                                                      |
+| ------ | ------------------------------------------------------------ |
+| curl   | `sh -c "$(curl -S https://cdn.jsdelivr.net/gh/KomoreKalu/Magisk-font-mod/update-binary.sh)"` |
+| wget   | `sh -c "$(wget -O https://cdn.jsdelivr.net/gh/KomoreKalu/Magisk-font-mod/update-binary.sh)"` |
 
 参考
 
