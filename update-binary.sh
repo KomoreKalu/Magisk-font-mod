@@ -1,8 +1,9 @@
 #!/bin/bash
+set -e
 IFS_TMP=$IFS
 IFS=$'\n'
 
-wget -c https://cdn.jsdelivr.net/gh/topjohnwu/Magisk/scripts/module_installer.sh
+curl -OS https://cdn.jsdelivr.net/gh/topjohnwu/Magisk/scripts/module_installer.sh
 
 if [ ${#} -eq 0 ]; then
 	for pkg in $(ls | grep '.*.zip$')
